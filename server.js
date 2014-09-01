@@ -3,16 +3,18 @@ var util = require('util'),
     express = require('express'),
     app = express();
 
-var port = 80;
+var port = 8000;
 
 var middleware = require('./middleware');
 middleware.enableCors(app);
 middleware.enableLogger(app);
 middleware.useBodyParse(app);
 
+var services = require('./services');
+services.init();
+
 var controllers = require('./controllers');
 controllers.init(app);
-
 
 var server = http.createServer(app);
 
