@@ -1,13 +1,14 @@
 var r = require('rethinkdb');
+var db_config = require('./dbconfig');
 
 (function(services){
 
   var connection = null;
-  var DB_NAME = 'burger_crawl';
+  var DB_NAME = db_config.db;
   var TABLES = ['users', 'groups', 'locations', 'reviews'];
 
   services.init = function(){
-    r.connect( {host: 'localhost', port: 28015}, setConnection);
+    r.connect(db_config, setConnection);
   }
 
   function setConnection(err, conn) {
