@@ -3,7 +3,7 @@ var util = require('util'),
     express = require('express'),
     app = express();
 
-var port = 8000;
+var port = 80;
 
 var middleware = require('./middleware');
 middleware.enableCors(app);
