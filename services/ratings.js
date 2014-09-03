@@ -11,4 +11,17 @@ var db_config = require('./dbconfig');
     });
   }
 
+  ratingsService.getUserRatings = function(uid){
+    return r.connect(db_config).then(function(conn){
+      return r.table('ratings')
+        .filter({user: {id: uid}})
+        .run(conn)
+        .then(handleGetUserRatings);
+    });
+  }
+
+  function handleGetUserRatings(cursor) {
+    return cursor.toArray();
+  }
+
 })(module.exports);
