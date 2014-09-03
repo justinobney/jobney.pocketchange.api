@@ -5,7 +5,7 @@ var db_config = require('./dbconfig');
 
   var connection = null;
   var DB_NAME = db_config.db;
-  var TABLES = ['users', 'groups', 'locations', 'reviews'];
+  var TABLES = ['users', 'groups', 'locations', 'ratings'];
 
   services.init = function(){
     r.connect(db_config, setConnection);

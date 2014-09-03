@@ -1,7 +1,7 @@
 {
-  "name": "jobney.pocketchange.api",
+  "name": "envoc.burger-crawl.api",
   "version": "0.1.0",
-  "description": "The PocketChange API",
+  "description": "The Envoc Burger Crawl API",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,8 +15,7 @@
     "logfmt": "^1.1.2",
     "passport": "^0.2.0",
     "rethinkdb": "^1.14.0-0",
-    "bluebird": "^2.3.2",
-    "secondthought": "0.0.3"
+    "bluebird": "^2.3.2"
   },
   "devDependencies": {
     "nodemon": "~1.2.1"
