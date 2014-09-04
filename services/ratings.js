@@ -4,6 +4,7 @@ var db_config = require('./dbconfig');
 (function(ratingsService) {
 
   ratingsService.submitRating = function(rating) {
+    rating.created = new Date();
     return r.connect(db_config).then(function(conn){
       return r.table('ratings')
         .insert(rating)
